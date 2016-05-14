@@ -1,0 +1,128 @@
+/*!
+Theme Name: NikPayne
+Theme URI: http://www.github.com/nikpayne/nikpayne
+Author: Nikolas Payne
+Author URI: http://www.nikpayne.com/
+Description: A simple theme for my personal website
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: colorful, minimal, elegant
+Text Domain: twentythirteen
+*/
+/*
+sketch:type=(["'])(?:(?=(\\?))\2.)*?\1
+*/
+
+
+@function rem($size) { @return #{$size / 16px;}rem; }
+@function letterspacing($kerning, $pixelHeight) { $rem: $pixelHeight/16; $size: $kerning/1000; @return #{$rem*$size}rem; }
+
+// @font-face {
+//   font-family: 'medium';
+//   src:  url('http://nikpayne.com/wp-content/themes/nikpayne/fonts/Medium-Regular.eot') format('embedded-opentype'),
+//         url('http://nikpayne.com/wp-content/themes/nikpayne/fonts/Medium-Regular.woff') format('woff'),
+//         url('http://nikpayne.com/wp-content/themes/nikpayne/fonts/Medium-Regular.ttf')  format('truetype'),
+//         url('http://nikpayne.com/wp-content/themes/nikpayne/fonts/Medium-Regular.svg') format('svg');
+//   font-weight: 400;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'medium';
+//   src:  url('http://nikpayne.com/wp-content/themes/nikpayne/fonts/Medium-Medium.eot') format('embedded-opentype'),
+//         url('http://nikpayne.com/wp-content/themes/nikpayne/fonts/Medium-Medium.woff') format('woff'),
+//         url('http://nikpayne.com/wp-content/themes/nikpayne/fonts/Medium-Medium.ttf')  format('truetype'),
+//         url('http://nikpayne.com/wp-content/themes/nikpayne/fonts/Medium-Medium.svg') format('svg');
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'medium';
+  src:  url('/fonts/Medium-Regular.eot') format('embedded-opentype'),
+        url('/fonts/Medium-Regular.woff') format('woff'),
+        url('/fonts/Medium-Regular.ttf')  format('truetype'),
+        url('/fonts/Medium-Regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'medium';
+  src:  url('fonts/Medium-Medium.eot') format('embedded-opentype'),
+        url('fonts/Medium-Medium.woff') format('woff'),
+        url('fonts/Medium-Medium.ttf')  format('truetype'),
+        url('fonts/Medium-Medium.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ico-moon';
+  src:  url('fonts/Ico-Moon.woff') format('woff'),
+        url('fonts/Ico-Moon.ttf')  format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+html {
+  font-size: 16px;
+  width: 100%;
+  min-height: 100vh;
+  background: #187989;
+  background: #21252c;
+}
+
+body {
+  position: relative;
+  text-size-adjust: none;
+  padding: 0;
+  margin:0;
+  height: inherit;
+  min-height: 100%;
+  font-family: "medium", sans-serif;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+$parra_from: #007A87;
+$parra_to: #008687;
+$parra_accent: #FF8076;
+
+$adapt_from: #4E47EA;
+$adapt_to: #4D45E7;
+$adapt_accent: #f79800;
+
+$vibe_from: #01B894;
+$vibe_to: #01C692;
+$vibe_accent: #E62953;
+
+$deep_from: #9013FE;
+$deep_to: #9813FE;
+$deep_accent: #5FE8C6;
+
+$zest_from: #E77868;
+$zest_to: #F07855;
+$zest_accent: #125062;
+
+$concert_from: #54515C;
+$concert_to: #9A515C;
+$concert_accent: #EC5B62;
+
+$spotify_main: #F3768C;
+$spotify_accent: #52F9D4;
+
+@import "header";
+@import "main";
+@import "portfolio";
+@import "colors";
+@import "footer";
